@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpotFinder</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="status-bar">
+        <span>Skip</span>
+    </div>
+    <div class="content">
+        <img src="coffee-cup.png" alt="Ilustración de una taza de café">
+        <h1>Welcome to SpotFinder</h1>
+        <p>Search for unique spots in your nearest location and explore new places!</p>
+    </div>
+    <div class="button-container">
+        <button class="button hidden" onclick="showLoginRegister()">Get Started</button>
+        <a href="restaurantes.html">restaurantes</a>
+    </div>
+    <div class="login-register hidden">
+        <h1>Login/Register</h1>
+        <form>
+            <input type="text" placeholder="Username" required><br><br>
+            <input type="password" placeholder="Password" required><br><br>
+            <button type="submit" class="button">Login</button>
+            <button type="button" class="button">Register</button>
+            <button class="button" onclick="volver()">volver</button>
+        </form>
+    </div>
+
+    <script>
+        function showLoginRegister() {
+            document.querySelector('.content').classList.add('hidden');
+            document.querySelector('.button-container').classList.add('hidden');
+            document.querySelector('.login-register').classList.remove('hidden');
+        }
+        function volver() {
+            document.querySelector('.login-register').classList.add('hidden');
+            document.querySelector('.button-container').classList.remove('hidden');
+            document.querySelector('.content').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
