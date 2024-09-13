@@ -10,6 +10,7 @@ fetch('js/restos.json')
         data.forEach(e => {
             body.innerHTML += 
                 `
+        <a id="${e.name}" class="rest">
         <article class="oferta">
             <div class="img">
                 <img src="img/res1.jpg">
@@ -18,11 +19,10 @@ fetch('js/restos.json')
                 <h2>${e.name}</h2>
                 <span>${e.location}</span>
                 <span>${e.open} - ${e.close}</span>
-                <div class="stats">
                     ${e.rating}
-                </div>
             </div>
         </article>
+        </a>
    `
 
 

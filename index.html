@@ -10,26 +10,18 @@
     <div class="status-bar">
         <span>Skip</span>
     </div>
+    <div class="foto-cont">
     <div class="content">
-        <img src="coffee-cup.png" alt="Ilustración de una taza de café">
+        <img src="./img/cofi.png" alt="Ilustración de una taza de café" class="foto">
         <h1>Welcome to SpotFinder</h1>
         <p>Search for unique spots in your nearest location and explore new places!</p>
-    </div>
+    
     <div class="button-container">
         <button class="button hidden" onclick="showLoginRegister()">Get Started</button>
-        <a href="restaurantes.html">restaurantes</a>
+        <a href="restaurantes.html" class="button">restaurantes</a>
     </div>
-    <div class="login-register hidden">
-        <h1>Login/Register</h1>
-        <form>
-            <input type="text" placeholder="Username" required><br><br>
-            <input type="password" placeholder="Password" required><br><br>
-            <button type="submit" class="button">Login</button>
-            <button type="button" class="button">Register</button>
-            <button class="button" onclick="volver()">volver</button>
-        </form>
     </div>
-
+</div>
     <script>
         function showLoginRegister() {
             document.querySelector('.content').classList.add('hidden');

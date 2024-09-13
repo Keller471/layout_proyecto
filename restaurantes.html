@@ -11,49 +11,60 @@
     <title>Document</title>
 </head>
 
-<body> 
+<body>
     <header class="index">
         <section class="portada">
             <div class="buscador">
-                <div class="icono"><i class="iconos">fmd_good</i> </div>
                 <input type="search" placeholder="Ingrese busqueda...">
                 <input type="submit" class="iconos" value="search">
             </div>
         </section>
-        <button class="dropbtn" onclick="toggleDropdown()">Warsaw: Poland</button>
-        <div id="dropdown-content" class="dropdown-content">
-            <a href="#">Opción 1</a>
-            <a href="#">Opción 2</a>
-            <a href="#">Opción 3</a>
-        </div>
-        <button class="dropbtn" onclick="toggleDropdown()">Recommended</button>
-        <div id="dropdown-content" class="dropdown-content">
-            <a href="#">Opción 1</a>
-            <a href="#">Opción 2</a>
-            <a href="#">Opción 3</a>
+        <div class="cont-botones">
+            <div class="botones">
+                <button class="dropbtn" onclick="toggleDropdown()">Warsaw: Poland</button>
+                <div id="dropdown-content" class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                    <a href="#">Opción 3</a>
+                </div>
+            </div>
+            <div class="botones">
+                <button class="dropbtn" onclick="toggleDropdown1()">Recommended</button>
+                <div id="dropdown-content1" class="dropdown-content">
+                    <a href="#">Opción 1</a>
+                    <a href="#">Opción 2</a>
+                    <a href="#">Opción 3</a>
+                </div>
+            </div>
         </div>
         <div class="titulo">
             Explore Restaurants
         </div>
         <nav class="categorias">
             <a href="" class="btn_categoria">
-                
+
             </a>
             <a href="" class="btn_categoria">
-                
+
             </a>
             <a href="" class="btn_categoria">
-                
+
             </a>
             <a href="" class="btn_categoria">
-                
+
             </a>
         </nav>
     </header>
-    <main class="index">    
+    <main class="index">
         <section class="offers" id="resto">
         </section>
     </main>
+    <nav class="restaurant">
+        <a href="restaurantes.html" class="resto">DETAILS</a>
+        <a href="menu.html" class="resto">MENU</a>
+        <a href="resenia.html" class="resto selected">REVIEWS</a>
+        <a href="resenias.html" class="resto selected">REVIEWS</a>
+      </nav>
     <script src="js/leerjson.js"></script>
     <script src="js/resto.js"></script>
 </body>
