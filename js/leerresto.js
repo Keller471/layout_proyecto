@@ -9,13 +9,12 @@ fetch('js/restos.json')
             if (e.name == localStorage.getItem("titulo")) {
                 body.innerHTML += 
                     ` <header class="restaurante">
-<section class="portada">
-    <a href="index.html" class="iconos">
+                        <a href="index.html" class="iconos">
         arrow_back
     </a>
-    <div class="calificacion">
-        ${e.rating}
-    </div>
+<section class="portada">
+
+                <img src="${e.avatar.src}" class="imagen">
 </section>
 <section class="informacion">
     <div><br>
@@ -25,6 +24,9 @@ fetch('js/restos.json')
     <div class="valor">
     ${`<span class="iconos verde f13">euro_symbol</span>`.repeat(e.price)}
     ${`<span class="iconos f13">euro_symbol</span>`.repeat(3 - e.price)}
+    </div>
+    <div class="calificacion">
+        ${e.rating}
     </div>
 </section>
 </header>
@@ -59,10 +61,6 @@ fetch('js/restos.json')
     <p>${e.description}</p>
 </div>
 </main>
-<nav class="restaurant">
-<a href="restaurante.html" class="resto selected">DETAILS</a>
-<a href="menu.html" class="resto">MENU</a>
-<a href="resenia.html" class="resto">REVIEWS</a>
-</nav>`}
+`}
     });
     })

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/register.css">
+  <title>Register</title>
+</head>
+<body>
+
+  <div class="register-box hidden" id="registro">
+    <h2>Registrarte es simple</h2>
+    <form>
+      <input type="hidden" name="accion" value="registro">
+      <div class="user-box">
+        <input type="text" name="email" required>
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" required>
+        <label>Password</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="password2" required>
+        <label>Repeat password</label>
+      </div>
+      <center><a href="./restaurantes.html" class="boton">Submit</a></center>
+    </form>
+    <div class="logib"></div>
+		<center><button class="dropbtn" onclick="toggleDropdown1()">¿Ya tienes una cuenta?</button></center>
+	</div>
+  </div>
+  <div class="register-box" id="login">
+		
+		<h2>Log in</h2>
+		<form>
+
+			<div class="user-box">
+				<input type="text" name="email" required>
+				<label>email</label>
+			</div>
+			<div class="user-box">
+				<input type="password" name="Password" required>
+				<label>Password</label>
+			</div>
+			<center><a href="./restaurantes.html" class="boton">Submit</a></center>
+			</form>
+		<div class="registro">
+		<center><button class="dropbtn" onclick="toggleDropdown()">ir al registro</button></center>
+		</div>
+	</div>
+    <script>
+        function toggleDropdown() {
+            document.querySelector('#login').classList.add('hidden');
+	document.querySelector('#registro').classList.remove('hidden');
+}
+function toggleDropdown1() {
+            document.querySelector('#login').classList.remove('hidden');
+	document.querySelector('#registro').classList.add('hidden');
+}
+    </script>
+</body>
+</html>

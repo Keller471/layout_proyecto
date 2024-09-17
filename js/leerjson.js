@@ -13,7 +13,7 @@ fetch('js/restos.json')
         <a id="${e.name}" class="rest">
         <article class="oferta">
             <div class="img">
-                <img src="img/res1.jpg">
+                <img src="${e.avatar.src}">
             </div>
             <div class="desc">
                 <h2>${e.name}</h2>
