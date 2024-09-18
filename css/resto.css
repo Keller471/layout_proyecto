@@ -50,22 +50,61 @@ p {
 }
 
 body {
-  height: 100vh;
+  height: 150vh;
   width: 100% !important;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  overflow-x: hidden;
 }
 
 .imagen {
+  margin: auto;
   border-radius: 15px;
-          width: 100%;
+          width: 95%;
 }
+nav.categorias {
+  margin-left: 20px;
+    height: 60px;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start; /* Alinea los botones al inicio del contenedor */
+    gap: 10px;
+    overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido es más ancho */
+    white-space: nowrap; /* Evita que los botones se envuelvan en una nueva línea */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    align-items: center;
 
+  & .imagen-resto{
+    height: 80%;
+    width: auto;
+    background-color: rgba(93, 146, 1, 0.596);
+        border: solid 1px;
+        display: flex;
+        flex-shrink: 0; /* Impide que los botones se encojan */
+        flex-direction: column;
+        font-size: 1.1em;
+        color: rgba(117, 116, 116, 0.726);
+        cursor: default;
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
+        white-space: nowrap; /* Evita el ajuste de texto en los botones */
+  }
+  
+}
+@media (min-width: 500px) {
+  nav.categorias {
+    margin-left: 20px;
+    height: 100%;
+      flex-direction: row;
+      gap: 20px;
+      & .imagen-resto{
+        width: auto;
+        height: 80%;
+      }
+  }
+}
 main.index {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   position: relative;
   overflow: hidden;
@@ -104,7 +143,11 @@ main.index {
     }
   }
 }
-
+@media (min-width: 500px) {
+  main.index {
+      height: 50vh;
+  }
+}
 & span.titulo {
   font-size: 1.3em;
   position: absolute;
@@ -141,7 +184,6 @@ main.index {
 }
 
 header.restaurante {
-  height: 60%;
   width: 100%;
 
   background-position: center;
@@ -160,10 +202,6 @@ header.restaurante {
     width: 100%;
     border-radius: 25px;
     position: relative;
-    background: linear-gradient(0deg,
-        rgba(0, 0, 0, 0.493),
-        rgba(255, 255, 255, 0) 90%);
-
     a {
       margin: 20px;
       font-size: 25pt;
@@ -185,21 +223,21 @@ header.restaurante {
     }
   }
 
-  .informacion {
-    height: 20%;
-    width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    align-items: center;
+  
+}
+.informacion {
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
 
-    p {
-      margin-top: 7px;
-    }
+  p {
+    margin-top: 7px;
   }
 }
-
 nav.restaurant {
   position: fixed;
   width: 100%;
@@ -228,5 +266,96 @@ nav.restaurant {
   a.selected {
     font-weight: bolder;
     border-top: solid 3px var(--verde);
+  }
+}
+.menu{
+  width: 100%;
+  height: 20%;
+}
+.btn_categoria1 {
+  background-color: rgba(93, 146, 1, 0.596);
+  border: solid 1px;
+  height: auto;
+  width: 110px; /* Ancho fijo para los botones */
+  display: flex;
+  padding: 15px;
+  flex-shrink: 0; /* Impide que los botones se encojan */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 1.1em;
+  color: rgba(117, 116, 116, 0.726);
+  cursor: default;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  white-space: nowrap; /* Evita el ajuste de texto en los botones */
+}
+@media (min-width: 500px) {
+  .btn_categoria1 {
+      height: 20%;
+  }
+}
+nav.categorias1 {
+  margin-left: 20px;
+  height: 60px;
+  width: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start; /* Alinea los botones al inicio del contenedor */
+  gap: 10px;
+  overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido es más ancho */
+  white-space: nowrap; /* Evita que los botones se envuelvan en una nueva línea */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  align-items: center;
+
+
+}
+
+.container {
+  margin-left: 20px;
+  padding: 50px;
+  gap: 10px;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  height: 50px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 60px;
+  background-color: #f2f2f2;
+}
+
+.item button {
+  position: absolute;
+  background-color: #000;
+  right: 0;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.item button:hover {
+  background-color: #333;
+}
+@media (min-width: 330px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 660px) {
+  nav.categorias1 {
+    justify-content: center;
+    align-items: center;
   }
 }
